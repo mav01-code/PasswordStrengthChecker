@@ -14,3 +14,5 @@ In this project, I decided not to go with randomness, to keep it simple.
 - Frontend - HTML, CSS
 - Backend - Flask
 - Middleware - CORS (Smoother communication between frontend and backend)
+
+![Frontend Screenshot](frontend.png)
