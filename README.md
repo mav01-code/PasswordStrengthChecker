@@ -15,4 +15,7 @@ In this project, I decided not to go with randomness, to keep it simple.
 - Backend - Flask
 - Middleware - CORS (Smoother communication between frontend and backend)
 
+### Architecture
+Frontend(user input) -> Backend(logic + CORS check) -> Frontend(output)
+
 ![Frontend Screenshot](frontend.png)
