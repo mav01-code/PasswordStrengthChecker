@@ -11,6 +11,6 @@ Password strength is determined by factors such as
 In this project, I decided not to go with randomness, to keep it simple. 
 
 ### Tech Stack
-Frontend - HTML, CSS
-Backend - Flask
-Middleware - CORS (Smoother communication between frontend and backend)
+- Frontend - HTML, CSS
+- Backend - Flask
+- Middleware - CORS (Smoother communication between frontend and backend)
