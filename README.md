@@ -1,4 +1,4 @@
-# PasswordStrengthChecker
+# Password Strength Checker
 
 Password strength is determined by factors such as
 - Length of the password
