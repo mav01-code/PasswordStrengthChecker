@@ -1,12 +1,19 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/check', methods=['POST'])
+# ROOT route serves your frontend
+@app.route("/", methods=["GET"])
+def home():
+    return render_template("index.html")
+
+# API route
+@app.route("/check", methods=["POST"])
 def check_password():
-    s = request.json.get("password", "")
+    data = request.get_json(silent=True) or {}
+    s = data.get("password", "")
 
     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     lowercase = "abcdefghijklmnopqrstuvwxyz"
@@ -39,7 +46,7 @@ def check_password():
     if special_found: total_percentage += 20
     if lower_found: total_percentage += 20
 
-    return jsonify({"strength": f"{total_percentage}%"})
+    return jsonify({"strength": total_percentage})
 
 if __name__ == "__main__":
     app.run(debug=True)
